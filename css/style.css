@@ -1,0 +1,540 @@
+:root {
+  --primary-purple: rgba(29, 29, 29, 1);
+  --nav-background: rgba(29, 29, 29, .9);
+  --secondary-purple: rgb(16, 16, 16);
+  --hover-yellow: #F0FF38;
+  --secondary-yellow: #8E9903;
+  --primary-gray: #0BE9B7;
+  --secondary-gray: #0cc79b;
+  --primary-white: #fff;
+}
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'roboto', sans-serif;
+}
+
+body {
+  /* background-color: var(--primary-purple); */
+  background: var(--primary-purple);
+  overflow-x: hidden;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 3em;
+  position: fixed;
+  /* border-radius: 0px 0px 50px 50px; */
+  z-index: 10;
+  transition: all .2s ease-in-out;
+}
+
+nav.purpleNav {
+  background: var(--nav-background);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  font-size: 1.5em;
+}
+
+nav ul li {
+  margin-right: 2em;
+  color: var(--secondary-gray);
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  color: var(--secondary-gray);
+  text-decoration: none;
+  transition: all 250ms ease-in-out;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0%;
+  opacity: 0%;
+  height: .125em;
+  position: absolute;
+  bottom: 0px;
+  border-radius: 8px;
+  left: 0;
+  background-color: var(--secondary-gray);
+  transition: all 250ms ease-in-out;
+}
+
+nav ul li a:hover::after {
+  opacity: 100%;
+  width: 100%;
+}
+
+nav ul li input {
+  outline: none;
+  border: none;
+  height: 100%;
+  width: 0px;
+  border-bottom: 2px solid var(--secondary-gray);
+  margin-left: 10px;
+  background: transparent;
+  color: var(--secondary-gray);
+  font-size: 26px;
+  transition: width .3s linear;
+}
+
+nav ul li input::placeholder {
+  color: var(--secondary-gray);
+  font-size: 19px;
+}
+
+nav ul li input.openned {
+  width: 150px;
+}
+
+.search {
+  cursor: pointer;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  color: var(--primary-white);
+}
+
+.sections {
+  position: relative;
+  /* height: 1000px; */
+  margin-top: 75px;
+  padding: 0 75px;
+}
+
+.footer {
+  background-color: var(--secondary-purple);
+  border-top: 1px solid rgba(255, 255, 255, .1);
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100px;
+  margin-top: 100px;
+}
+
+.h-shadow {
+  background: linear-gradient(0deg, var(--primary-purple) 0%, rgba(0, 0, 0, 0) 40%);
+  position: absolute;
+  left: 0;
+  display: flex !important;
+  align-items: center;
+  padding: 0 13%;
+  cursor: pointer;
+  width: 100vw;
+  height: 100vh;
+}
+
+.v-shadow {
+  background: linear-gradient(95deg, var(--primary-purple) 0%, rgba(0, 0, 0, 0) 40%);
+  position: absolute;
+  left: 0;
+  display: flex !important;
+  align-items: center;
+  padding: 0 13%;
+  cursor: pointer;
+  width: 100vw;
+  height: 100vh;
+}
+
+.mainCarrossel {
+  /* align-items: center; */
+  background: rgba(255, 255, 255, .1);
+}
+
+.mainCarrossel .items {
+  display: flex !important;
+  align-items: center;
+  padding: 0 13%;
+  cursor: pointer;
+  background: rgba(0, 0, 0, .5);
+  width: 100vw;
+  height: 100vh;
+}
+
+.mainCarrossel .items .textArea {
+  width: 40%;
+  text-shadow: 3px 3px 1px #000;
+}
+
+.mainCarrossel .items .textArea h2,
+.inner .textArea h2 {
+  font-size: 4rem;
+  margin-bottom: 30px;
+}
+
+.mainCarrossel .items .textArea p,
+.inner .textArea p {
+  font-size: 1.5rem;
+}
+
+.mainCarrossel .slick-arrow,
+.modalCarrossel .slick-arrow {
+  height: 100%;
+  width: 300px;
+  z-index: 5;
+  display: flex !important;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.mainCarrossel .slick-next,
+.modalCarrossel .slick-next {
+  justify-content: flex-end;
+  padding-right: 5%;
+}
+
+.mainCarrossel .slick-prev,
+.modalCarrossel .slick-prev {
+  justify-content: flex-start;
+  padding-left: 5%;
+}
+
+.mainCarrossel .slick-prev,
+.mainCarrossel .slick-next,
+.modalCarrossel .slick-prev,
+.modalCarrossel .slick-next {
+  transition: all 1s ease-in-out;
+}
+
+.mainCarrossel .slick-next:hover,
+.modalCarrossel .slick-next:hover {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .5) 100%);
+}
+
+.mainCarrossel .slick-prev:hover,
+.modalCarrossel .slick-prev:hover {
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .5) 100%);
+}
+
+.sections .row h5 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.sections .elements {
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 15px;
+}
+
+body::-webkit-scrollbar {
+  width: 15px;
+}
+
+.sections .elements::-webkit-scrollbar {
+  width: 100%;
+  position: absolute;
+  bottom: -5px;
+  /* border: 2px solid black; */
+}
+
+.inner .textArea::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar {
+  background-color: var(--secondary-purple);
+}
+
+.sections .elements::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-gray);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.inner .textArea::-webkit-scrollbar-thumb {
+  background-color: var(--primary-gray);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.sections .elements::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover,
+.inner .textArea::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary-gray);
+}
+
+.sections .el {
+  cursor: pointer;
+  height: 250px;
+  width: 400px;
+  border: 5px solid var(--primary-gray);
+  background-color: grey;
+  background-position: center;
+  position: relative;
+  flex: none;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 15px;
+  transform: scale(.95);
+  transition: all .2s ease-in-out;
+  box-shadow: 10px 10px 19px -11px rgba(0, 0, 0, 1);
+}
+
+.sections .el:hover {
+  transform: scale(1);
+}
+
+.sections .el .box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40%;
+  background-color: rgba(0, 0, 0, .8);
+  overflow: hidden;
+  border-radius: 0 0 15px 15px;
+}
+
+.sections .el h6 {
+  margin: 15px;
+  font-size: 4rem;
+}
+
+.sections .el p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.sections .row {
+  margin-top: 30px;
+}
+
+.modalContent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(101%);
+  background-color: rgba(0, 0, 0, .8);
+  transition: all .3s linear;
+  filter: opacity(0);
+}
+
+.inner {
+  position: relative;
+  width: 98vw;
+  height: 98vh;
+  /* background-color: #ddd; */
+  border-radius: 15px;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner .backBtn {
+  z-index: 21;
+  color: white;
+  position: absolute;
+  background: transparent;
+  left: 1%;
+  top: 2%;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  display: flex;
+  transform: scale(0.8);
+  transition: all .2s linear;
+  width: 90px;
+  height: 90px;
+  background: rgba(0, 0, 0, .5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner .backBtn:hover {
+  transform: scale(1);
+}
+
+.inner .backBtn i {
+  font-size: 54px;
+  padding: 15px;
+}
+
+.inner .modalCarrossel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  display: flex !important;
+  overflow: hidden;
+}
+
+.modalCarrossel .items {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+}
+
+.modalCarrossel .items img {
+  width: 100%;
+  height: auto;
+}
+
+.inner .textArea {
+  z-index: 21;
+  position: absolute;
+  text-align: center;
+  width: 66%;
+  height: 25%;
+  /* max-height: 30%; */
+  overflow-x: hidden;
+  overflow-y: scroll;
+  top: 60%;
+  margin: 0 5%;
+  padding: 30px;
+  background: rgba(0, 0, 0, .5);
+  border-radius: 15px;
+  text-shadow: 3px 3px 1px #000;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.mobile-menu {
+  cursor: pointer;
+  display: none;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: all .3s linear;
+}
+
+@media screen and (max-width: 750px) {
+  nav {
+    padding: 30px 1em;
+    height: 11vh;
+  }
+  .mobile-menu {
+    display: block;
+  }
+  .menu-ul {
+    transform: translateX(-100%);
+    filter: opacity(0);
+    transition: all .3s linear;
+  }
+  .menu-ul.active {
+    transform: translateX(0%);
+    filter: opacity(1);
+  }
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  .mobile-menu.active .line2 {
+    filter: opacity(0);
+  }
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+  .menu ul {
+    top: 11vh;
+    position: absolute;
+    left: 0;
+    width: 90vw;
+    height: 89vh;
+    background: linear-gradient(0deg, var(--primary-purple) 0%, var(--nav-background) 90%);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .menu ul li {
+    margin-right: 0;
+  }
+  .mainCarrossel .slick-arrow,
+  .modalCarrossel .slick-arrow {
+    width: 50px;
+  }
+  .mainCarrossel .slick-next,
+  .modalCarrossel .slick-next {
+    justify-content: flex-end;
+    padding-right: 5%;
+  }
+  .mainCarrossel .slick-prev,
+  .modalCarrossel .slick-prev {
+    justify-content: flex-start;
+    padding-left: 5%;
+  }
+  .mainCarrossel .items .textArea {
+    bottom: 19%;
+    left: 0;
+    flex: 1;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+  .mainCarrossel .items .textArea h2,
+  .inner .textArea h2 {
+    font-size: 2.1rem;
+    margin-bottom: 15px;
+  }
+  .mainCarrossel .items .textArea p,
+  .inner .textArea p {
+    font-size: 1rem;
+  }
+  .sections {
+    padding: 0 15px;
+  }
+  .sections .row h5 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .inner .backBtn {
+    width: 70px;
+    height: 70px;
+  }
+  .inner .backBtn i {
+    font-size: 42px;
+  }
+  .inner .textArea {
+    width: 88%;
+    height: 23%;
+    top: 68%;
+    background: rgba(255, 255, 255, .1);
+  }
+  .inner .textArea::-webkit-scrollbar {
+    width: 5px;
+  }
+  .sections .el {
+    height: 57vw;
+    width: 100%;
+  }
+}

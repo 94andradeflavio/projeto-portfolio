@@ -1,0 +1,49 @@
+[{
+    "id": "130000",
+    "category": "c1",
+    "title": "Título aleatório para teste",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "path": "./img/item_1",
+    "images": 3
+  },
+  {
+    "id": "130001",
+    "category": "c1",
+    "title": "Título aleatório para teste",
+    "description": "segundo item",
+    "path": "./img/item_2",
+    "images": 3
+  },
+  {
+    "id": "130002",
+    "category": "c2",
+    "title": "Título aleatório para teste",
+    "description": "terceiro item",
+    "path": "./img/item_3",
+    "images": 3
+  },
+  {
+    "id": "130003",
+    "category": "c2",
+    "title": "Mike Wazowski",
+    "description": "quarto item",
+    "path": "./img/item_4",
+    "images": 3
+  },
+  {
+    "id": "130004",
+    "category": "c3",
+    "title": "Shrek",
+    "description": "quinto item",
+    "path": "./img/item_5",
+    "images": 3
+  },
+  {
+    "id": "130005",
+    "category": "c1",
+    "title": "Gasparzinho",
+    "description": "sexto item",
+    "path": "./img/item_3",
+    "images": 3
+  }
+]

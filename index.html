@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/4853324d28.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/slick.css">
+  <link rel="stylesheet" href="./css/slick-theme.css">
+  <link rel="stylesheet" href="./css/animate.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>LandingPage de projetos</title>
+</head>
+
+<body>
+  <div id="app">
+
+    <nav id="nav">
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <div class="menu">
+        <ul class="menu-ul">
+          <li><a href="#" value="main" onClick="scrollSuave(event)">Início</a></li>
+          <li><a href="#" value="c1" onClick="scrollSuave(event)">Categoria 1</a></li>
+          <li><a href="#" value="c2" onClick="scrollSuave(event)">Categoria 2</a></li>
+          <li><a href="#" value="c3" onClick="scrollSuave(event)">Categoria 3</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li><i class="fas fa-search search"></i><input type="text" id="searchTicket" maxlength="6" placeholder="ID do produto"></li>
+          <!-- <li><a href="#"><i class="far fa-envelope"></i></a></li> -->
+        </ul>
+      </div>
+    </nav>
+
+    <div id="main" class="main mainCarrossel"></div>
+
+    <div class="sections">
+      <div class="row">
+        <h5>Categoria 1</h5>
+        <div class="elements" id="c1"></div>
+      </div>
+      <div class="row">
+        <h5>Categoria 2</h5>
+        <div class="elements" id="c2"></div>
+      </div>
+      <div class="row">
+        <h5>Categoria 3</h5>
+        <div class="elements" id="c3"></div>
+      </div>
+    </div>
+
+    <div class="footer">
+      Projeto desenvolvido por: Flávio Andrade. Nem todos os direitos reservados &trade;
+    </div>
+
+    <div class="modalContent">
+      <div class="inner">
+        <button class="backBtn" onClick="fechaModal()">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <div class="textArea">
+          <h2 class="textTitle">Título</h2>
+          <p class="textDesc">Descicao</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="./js/jquery.js"></script>
+  <script src="./js/slick.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
