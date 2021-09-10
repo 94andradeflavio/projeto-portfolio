@@ -434,7 +434,7 @@ body::-webkit-scrollbar-thumb:hover,
 .mobile-menu div {
   width: 32px;
   height: 2px;
-  background: #fff;
+  background: var(--secondary-gray);
   margin: 8px;
   transition: all .3s linear;
 }
@@ -446,6 +446,8 @@ body::-webkit-scrollbar-thumb:hover,
   }
   .mobile-menu {
     display: block;
+    position: absolute;
+    top: 31%;
   }
   .menu-ul {
     transform: translateX(-100%);
